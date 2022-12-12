@@ -8,21 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		3A07B7D528E88A76007FEA2C /* BreatheType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A07B7D428E88A76007FEA2C /* BreatheType.swift */; };
-		3A07B7D728E88AA6007FEA2C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A07B7D628E88AA6007FEA2C /* HomeView.swift */; };
+		3A07B7D728E88AA6007FEA2C /* BreatheView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A07B7D628E88AA6007FEA2C /* BreatheView.swift */; };
 		3A8BC4A528E3D55500E3AF07 /* iCalmApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8BC4A428E3D55500E3AF07 /* iCalmApp.swift */; };
 		3A8BC4A728E3D55500E3AF07 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8BC4A628E3D55500E3AF07 /* ContentView.swift */; };
 		3A8BC4A928E3D55700E3AF07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A8BC4A828E3D55700E3AF07 /* Assets.xcassets */; };
 		3A8BC4AC28E3D55700E3AF07 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A8BC4AB28E3D55700E3AF07 /* Preview Assets.xcassets */; };
+		3AD17EB9293C0A3E005EC5C1 /* BreatheViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD17EB8293C0A3E005EC5C1 /* BreatheViewModelProtocol.swift */; };
+		3AD17EBB293CBBD5005EC5C1 /* BreatheViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD17EBA293CBBD5005EC5C1 /* BreatheViewProtocol.swift */; };
+		3AD17EBD293CBFC3005EC5C1 /* BreatheViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD17EBC293CBFC3005EC5C1 /* BreatheViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3A07B7D428E88A76007FEA2C /* BreatheType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreatheType.swift; sourceTree = "<group>"; };
-		3A07B7D628E88AA6007FEA2C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		3A07B7D628E88AA6007FEA2C /* BreatheView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreatheView.swift; sourceTree = "<group>"; };
 		3A8BC4A128E3D55500E3AF07 /* iCalm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iCalm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A8BC4A428E3D55500E3AF07 /* iCalmApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iCalmApp.swift; sourceTree = "<group>"; };
 		3A8BC4A628E3D55500E3AF07 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3A8BC4A828E3D55700E3AF07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A8BC4AB28E3D55700E3AF07 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3AD17EB8293C0A3E005EC5C1 /* BreatheViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreatheViewModelProtocol.swift; sourceTree = "<group>"; };
+		3AD17EBA293CBBD5005EC5C1 /* BreatheViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreatheViewProtocol.swift; sourceTree = "<group>"; };
+		3AD17EBC293CBFC3005EC5C1 /* BreatheViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreatheViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,9 +53,29 @@
 		3A07B7D328E88A46007FEA2C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				3A07B7D628E88AA6007FEA2C /* HomeView.swift */,
+				3A07B7D628E88AA6007FEA2C /* BreatheView.swift */,
+				3AD17EBA293CBBD5005EC5C1 /* BreatheViewProtocol.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		3A28BBB428FCD7B100899D5D /* BreatheView */ = {
+			isa = PBXGroup;
+			children = (
+				3A28BBB528FCDCD100899D5D /* ViewModel */,
+				3A07B7D228E88A38007FEA2C /* Model */,
+				3A07B7D328E88A46007FEA2C /* View */,
+			);
+			path = BreatheView;
+			sourceTree = "<group>";
+		};
+		3A28BBB528FCDCD100899D5D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3AD17EB8293C0A3E005EC5C1 /* BreatheViewModelProtocol.swift */,
+				3AD17EBC293CBFC3005EC5C1 /* BreatheViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		3A8BC49828E3D55500E3AF07 = {
@@ -71,8 +97,7 @@
 		3A8BC4A328E3D55500E3AF07 /* iCalm */ = {
 			isa = PBXGroup;
 			children = (
-				3A07B7D328E88A46007FEA2C /* View */,
-				3A07B7D228E88A38007FEA2C /* Model */,
+				3A28BBB428FCD7B100899D5D /* BreatheView */,
 				3A8BC4A428E3D55500E3AF07 /* iCalmApp.swift */,
 				3A8BC4A628E3D55500E3AF07 /* ContentView.swift */,
 				3A8BC4A828E3D55700E3AF07 /* Assets.xcassets */,
@@ -160,8 +185,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A8BC4A728E3D55500E3AF07 /* ContentView.swift in Sources */,
-				3A07B7D728E88AA6007FEA2C /* HomeView.swift in Sources */,
+				3AD17EBD293CBFC3005EC5C1 /* BreatheViewModel.swift in Sources */,
+				3AD17EB9293C0A3E005EC5C1 /* BreatheViewModelProtocol.swift in Sources */,
+				3A07B7D728E88AA6007FEA2C /* BreatheView.swift in Sources */,
 				3A07B7D528E88A76007FEA2C /* BreatheType.swift in Sources */,
+				3AD17EBB293CBBD5005EC5C1 /* BreatheViewProtocol.swift in Sources */,
 				3A8BC4A528E3D55500E3AF07 /* iCalmApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
