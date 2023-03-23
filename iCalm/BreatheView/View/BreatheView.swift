@@ -40,9 +40,9 @@ struct BreatheView<ViewModelProtocol>: View where ViewModelProtocol: BreatheView
                         Spacer()
                         Text(viewModel.statusText.uppercased())
                             .font(.system(size: 24, weight: .regular))
-                            .foregroundColor(.cgLightGray)
+                            .foregroundColor(.white)
                             .offset(0, -270)
-                            .animation(.easeIn)
+                            .animation(.easeInOut, value: viewModel.currentProgramCount)
                     }
                 }
                 .onTapGesture {
@@ -59,17 +59,18 @@ struct BreatheView<ViewModelProtocol>: View where ViewModelProtocol: BreatheView
             ForEach(0..<circlesCount) {
                 Circle()
                     .fill(viewModel.gradient)
+                    .opacity(0.9)
                     .frame(getSize())
                     .offset(x: CGFloat(getXOffset()))
                     .rotationEffect(.degrees(Double(Int(360.0) / circlesCount * $0)))
-                    .blur(3)
+                    .blur(6)
                     .blendMode(.screen)
             }
             Circle()
-                .fill(viewModel.gradient)
+                .fill(Color.cgDarkGray)
                 .frame(minSize * 0.6)
-                .opacity(0.8)
-                .blur(1)
+                .opacity(0.5)
+                .blur(8)
         }
     }
     
@@ -105,6 +106,7 @@ struct BreatheView<ViewModelProtocol>: View where ViewModelProtocol: BreatheView
                 .fill(Color.clear)
                 .frame(minSize)
             viewModel.currentBreatheStage().getImage()
+                .foregroundColor(.white)
         }
     }
     
