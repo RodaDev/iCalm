@@ -16,12 +16,21 @@
 		3AD17EB9293C0A3E005EC5C1 /* BreatheViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD17EB8293C0A3E005EC5C1 /* BreatheViewModelProtocol.swift */; };
 		3AD17EBB293CBBD5005EC5C1 /* BreatheViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD17EBA293CBBD5005EC5C1 /* BreatheViewProtocol.swift */; };
 		3AD17EBD293CBFC3005EC5C1 /* BreatheViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD17EBC293CBFC3005EC5C1 /* BreatheViewModel.swift */; };
+		6D48E0BC2999645400847FA4 /* BreatheProgramListViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D48E0BB2999645400847FA4 /* BreatheProgramListViewModelProtocol.swift */; };
+		6D48E0BE2999648500847FA4 /* BreatheProgramListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D48E0BD2999648500847FA4 /* BreatheProgramListViewModel.swift */; };
+		6D50F06E29A181B8000DBD23 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D50F06D29A181B8000DBD23 /* CardView.swift */; };
+		6D50F07129A18297000DBD23 /* CardsCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D50F07029A18297000DBD23 /* CardsCarouselView.swift */; };
+		6D50F07429A764E1000DBD23 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D50F07329A764E1000DBD23 /* MockData.swift */; };
+		6D69B6E0298E68B200E46C2F /* BreatheProgramListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D69B6DF298E68B200E46C2F /* BreatheProgramListView.swift */; };
+		6D6FF28C29AE8BBA00D66534 /* BackgroundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6FF28B29AE8BBA00D66534 /* BackgroundImage.swift */; };
+		6D6FF28F29BBDC3D00D66534 /* SlideCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6FF28E29BBDC3D00D66534 /* SlideCarousel.swift */; };
+		6DEC5EF029731FC40050750A /* PureSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 6DEC5EEF29731FC40050750A /* PureSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3A07B7D428E88A76007FEA2C /* BreatheType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreatheType.swift; sourceTree = "<group>"; };
 		3A07B7D628E88AA6007FEA2C /* BreatheView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreatheView.swift; sourceTree = "<group>"; };
-		3A8BC4A128E3D55500E3AF07 /* iCalm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iCalm.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A8BC4A128E3D55500E3AF07 /* Просто Дыши.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Просто Дыши.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A8BC4A428E3D55500E3AF07 /* iCalmApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iCalmApp.swift; sourceTree = "<group>"; };
 		3A8BC4A628E3D55500E3AF07 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3A8BC4A828E3D55700E3AF07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -29,6 +38,14 @@
 		3AD17EB8293C0A3E005EC5C1 /* BreatheViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreatheViewModelProtocol.swift; sourceTree = "<group>"; };
 		3AD17EBA293CBBD5005EC5C1 /* BreatheViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreatheViewProtocol.swift; sourceTree = "<group>"; };
 		3AD17EBC293CBFC3005EC5C1 /* BreatheViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreatheViewModel.swift; sourceTree = "<group>"; };
+		6D48E0BB2999645400847FA4 /* BreatheProgramListViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreatheProgramListViewModelProtocol.swift; sourceTree = "<group>"; };
+		6D48E0BD2999648500847FA4 /* BreatheProgramListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreatheProgramListViewModel.swift; sourceTree = "<group>"; };
+		6D50F06D29A181B8000DBD23 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		6D50F07029A18297000DBD23 /* CardsCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsCarouselView.swift; sourceTree = "<group>"; };
+		6D50F07329A764E1000DBD23 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		6D69B6DF298E68B200E46C2F /* BreatheProgramListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreatheProgramListView.swift; sourceTree = "<group>"; };
+		6D6FF28B29AE8BBA00D66534 /* BackgroundImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundImage.swift; sourceTree = "<group>"; };
+		6D6FF28E29BBDC3D00D66534 /* SlideCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideCarousel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DEC5EF029731FC40050750A /* PureSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,7 +107,7 @@
 		3A8BC4A228E3D55500E3AF07 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3A8BC4A128E3D55500E3AF07 /* iCalm.app */,
+				3A8BC4A128E3D55500E3AF07 /* Просто Дыши.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -97,6 +115,9 @@
 		3A8BC4A328E3D55500E3AF07 /* iCalm */ = {
 			isa = PBXGroup;
 			children = (
+				6D6FF28A29AE8BA600D66534 /* CustomViews */,
+				6D50F07229A764C7000DBD23 /* MockData */,
+				6D69B6D9298E662B00E46C2F /* BreatheProgramList */,
 				3A28BBB428FCD7B100899D5D /* BreatheView */,
 				3A8BC4A428E3D55500E3AF07 /* iCalmApp.swift */,
 				3A8BC4A628E3D55500E3AF07 /* ContentView.swift */,
@@ -114,12 +135,89 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		6D50F06C29A181A0000DBD23 /* CardView */ = {
+			isa = PBXGroup;
+			children = (
+				6D50F06D29A181B8000DBD23 /* CardView.swift */,
+			);
+			path = CardView;
+			sourceTree = "<group>";
+		};
+		6D50F06F29A18270000DBD23 /* CardsCarousel */ = {
+			isa = PBXGroup;
+			children = (
+				6D50F07029A18297000DBD23 /* CardsCarouselView.swift */,
+			);
+			path = CardsCarousel;
+			sourceTree = "<group>";
+		};
+		6D50F07229A764C7000DBD23 /* MockData */ = {
+			isa = PBXGroup;
+			children = (
+				6D50F07329A764E1000DBD23 /* MockData.swift */,
+			);
+			path = MockData;
+			sourceTree = "<group>";
+		};
+		6D69B6D9298E662B00E46C2F /* BreatheProgramList */ = {
+			isa = PBXGroup;
+			children = (
+				6D69B6DC298E66D500E46C2F /* Model */,
+				6D69B6DB298E66BB00E46C2F /* ViewModel */,
+				6D69B6DA298E66AB00E46C2F /* View */,
+			);
+			path = BreatheProgramList;
+			sourceTree = "<group>";
+		};
+		6D69B6DA298E66AB00E46C2F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6D6FF28D29BBDC2200D66534 /* SlideCarousel */,
+				6D50F06F29A18270000DBD23 /* CardsCarousel */,
+				6D50F06C29A181A0000DBD23 /* CardView */,
+				6D69B6DF298E68B200E46C2F /* BreatheProgramListView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6D69B6DB298E66BB00E46C2F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6D48E0BB2999645400847FA4 /* BreatheProgramListViewModelProtocol.swift */,
+				6D48E0BD2999648500847FA4 /* BreatheProgramListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		6D69B6DC298E66D500E46C2F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6D6FF28A29AE8BA600D66534 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				6D6FF28B29AE8BBA00D66534 /* BackgroundImage.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		6D6FF28D29BBDC2200D66534 /* SlideCarousel */ = {
+			isa = PBXGroup;
+			children = (
+				6D6FF28E29BBDC3D00D66534 /* SlideCarousel.swift */,
+			);
+			path = SlideCarousel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3A8BC4A028E3D55500E3AF07 /* iCalm */ = {
+		3A8BC4A028E3D55500E3AF07 /* Просто Дыши */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3A8BC4AF28E3D55700E3AF07 /* Build configuration list for PBXNativeTarget "iCalm" */;
+			buildConfigurationList = 3A8BC4AF28E3D55700E3AF07 /* Build configuration list for PBXNativeTarget "Просто Дыши" */;
 			buildPhases = (
 				3A8BC49D28E3D55500E3AF07 /* Sources */,
 				3A8BC49E28E3D55500E3AF07 /* Frameworks */,
@@ -129,9 +227,12 @@
 			);
 			dependencies = (
 			);
-			name = iCalm;
+			name = "Просто Дыши";
+			packageProductDependencies = (
+				6DEC5EEF29731FC40050750A /* PureSwiftUI */,
+			);
 			productName = iCalm;
-			productReference = 3A8BC4A128E3D55500E3AF07 /* iCalm.app */;
+			productReference = 3A8BC4A128E3D55500E3AF07 /* Просто Дыши.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -158,11 +259,14 @@
 				Base,
 			);
 			mainGroup = 3A8BC49828E3D55500E3AF07;
+			packageReferences = (
+				6DEC5EEE29731FC40050750A /* XCRemoteSwiftPackageReference "pure-swift-ui" */,
+			);
 			productRefGroup = 3A8BC4A228E3D55500E3AF07 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3A8BC4A028E3D55500E3AF07 /* iCalm */,
+				3A8BC4A028E3D55500E3AF07 /* Просто Дыши */,
 			);
 		};
 /* End PBXProject section */
@@ -184,13 +288,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D50F07129A18297000DBD23 /* CardsCarouselView.swift in Sources */,
+				6D6FF28F29BBDC3D00D66534 /* SlideCarousel.swift in Sources */,
+				6D48E0BC2999645400847FA4 /* BreatheProgramListViewModelProtocol.swift in Sources */,
 				3A8BC4A728E3D55500E3AF07 /* ContentView.swift in Sources */,
+				6D50F07429A764E1000DBD23 /* MockData.swift in Sources */,
+				6D69B6E0298E68B200E46C2F /* BreatheProgramListView.swift in Sources */,
+				6D6FF28C29AE8BBA00D66534 /* BackgroundImage.swift in Sources */,
 				3AD17EBD293CBFC3005EC5C1 /* BreatheViewModel.swift in Sources */,
 				3AD17EB9293C0A3E005EC5C1 /* BreatheViewModelProtocol.swift in Sources */,
 				3A07B7D728E88AA6007FEA2C /* BreatheView.swift in Sources */,
 				3A07B7D528E88A76007FEA2C /* BreatheType.swift in Sources */,
 				3AD17EBB293CBBD5005EC5C1 /* BreatheViewProtocol.swift in Sources */,
 				3A8BC4A528E3D55500E3AF07 /* iCalmApp.swift in Sources */,
+				6D50F06E29A181B8000DBD23 /* CardView.swift in Sources */,
+				6D48E0BE2999648500847FA4 /* BreatheProgramListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,9 +439,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -357,9 +469,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -385,7 +497,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3A8BC4AF28E3D55700E3AF07 /* Build configuration list for PBXNativeTarget "iCalm" */ = {
+		3A8BC4AF28E3D55700E3AF07 /* Build configuration list for PBXNativeTarget "Просто Дыши" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3A8BC4B028E3D55700E3AF07 /* Debug */,
@@ -395,6 +507,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6DEC5EEE29731FC40050750A /* XCRemoteSwiftPackageReference "pure-swift-ui" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CodeSlicing/pure-swift-ui";
+			requirement = {
+				kind = exactVersion;
+				version = 3.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6DEC5EEF29731FC40050750A /* PureSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6DEC5EEE29731FC40050750A /* XCRemoteSwiftPackageReference "pure-swift-ui" */;
+			productName = PureSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3A8BC49928E3D55500E3AF07 /* Project object */;
 }

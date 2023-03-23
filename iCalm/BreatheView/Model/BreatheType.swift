@@ -9,26 +9,79 @@ import Foundation
 import SwiftUI
 
 struct BreatheProgram: Identifiable {
-    var id: String = UUID().uuidString
+    var id = UUID().uuidString
     var title: String
-    var color: Color
     var stages: [BreatheStage]
     var laps: Int
+    var image: String
+    
+    init(title: String, stages: [BreatheStage], laps: Int, image: String) {
+        self.title = title
+        self.laps = laps
+        self.image = image
+        var allStages = [BreatheStage]()
+        for _ in 0 ..< laps {
+            allStages.append(contentsOf: stages)
+        }
+        self.stages = allStages
+    }
 }
 
 class BreatheStage: ObservableObject {
     var type: BreatheType
-    var interval: Double
+    var interval: Int
+    var source: BreatheSource?
     
-    init(type: BreatheType, interval: Double) {
+    init(type: BreatheType, interval: Int, source: BreatheSource? = nil) {
         self.interval = interval
         self.type = type
+        self.source = source
+    }
+    
+    func getTitle() -> String {
+        switch type {
+        case .outPause, .inPause:
+            return "Пауза"
+        case .breatheIn:
+            return "Вдох"
+        case .breatheOut:
+            return "Выдох"
+        case .stop:
+            return ""
+        }
+    }
+    
+    func getImage() -> Image? {
+        if type == .inPause || type == .outPause {
+            return Image(sfSymbol: "pause")
+        }
+        switch source {
+        case .mouth:
+            return Image(sfSymbol: "mouth")
+        case .nose:
+            return Image(sfSymbol: "nose")
+        default:
+            return nil
+        }
     }
 }
 
 enum BreatheType: String {
+    case stop
     case breatheIn
     case breatheOut
-    case pause
+    case inPause
+    case outPause
 }
 
+enum BreatheSource {
+    case mouth
+    case nose
+}
+
+struct BreatheModel: Identifiable {
+    var id = UUID().uuidString
+    var program: BreatheProgram
+    let colorStart: Color
+    let colorEnd: Color
+}
