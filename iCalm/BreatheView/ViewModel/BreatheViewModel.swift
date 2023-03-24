@@ -11,7 +11,7 @@ import SwiftUI
 
 class BreatheViewModel: BreatheViewModelProtocol, ObservableObject {
     
-    private let generator = UINotificationFeedbackGenerator()
+    private let generator = UISelectionFeedbackGenerator()
     
     var counterText: String {
         get {
@@ -84,7 +84,7 @@ class BreatheViewModel: BreatheViewModelProtocol, ObservableObject {
         guard let firstStage = breatheModel.program.stages.first else {
             return
         }
-        generator.notificationOccurred(.success)
+        generator.selectionChanged()
         self.currentStage = firstStage
         timerPublisher
             .autoconnect()
@@ -101,7 +101,7 @@ class BreatheViewModel: BreatheViewModelProtocol, ObservableObject {
                 let currentProgram = stages[self.currentIndex]
                 self.currentProgramCount = timeStamp - counter + 1
                 if self.currentProgramCount == currentProgram.interval && self.currentIndex > 0 {
-                    self.generator.notificationOccurred(.success)
+                    self.generator.selectionChanged()
                 }
                 self.currentProgramType = currentProgram.type.rawValue
                 self.currentStage = currentProgram
@@ -116,7 +116,7 @@ class BreatheViewModel: BreatheViewModelProtocol, ObservableObject {
     }
     
     func stop() {
-        generator.notificationOccurred(.success)
+        generator.selectionChanged()
         buttonTitle = "Start"
         currentProgramType = ""
         currentProgramCount = 0

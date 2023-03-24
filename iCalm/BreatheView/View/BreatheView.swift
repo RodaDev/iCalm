@@ -58,12 +58,12 @@ struct BreatheView<ViewModelProtocol>: View where ViewModelProtocol: BreatheView
         ZStack {
             ForEach(0..<circlesCount) {
                 Circle()
-                    .fill(viewModel.gradient)
-                    .opacity(0.9)
+                    .fill(Color.cgCyan)
+                    .opacity(0.6)
                     .frame(getSize())
                     .offset(x: CGFloat(getXOffset()))
                     .rotationEffect(.degrees(Double(Int(360.0) / circlesCount * $0)))
-                    .blur(6)
+                    .blur(8)
                     .blendMode(.screen)
             }
             Circle()
@@ -148,9 +148,9 @@ struct BreatheView<ViewModelProtocol>: View where ViewModelProtocol: BreatheView
     private func getGhostBlur() -> CGFloat {
         switch viewModel.currentBreatheStage().type {
         case .breatheIn, .inPause:
-            return 2
+            return 3
         case.breatheOut, .stop , .outPause:
-            return 5
+            return 8
         }
     }
     
@@ -158,9 +158,9 @@ struct BreatheView<ViewModelProtocol>: View where ViewModelProtocol: BreatheView
         
         switch viewModel.currentBreatheStage().type {
         case .breatheIn, .inPause:
-            return 0.6
-        case.breatheOut, .stop , .outPause:
             return 0.3
+        case.breatheOut, .stop , .outPause:
+            return 0.2
         }
     }
     

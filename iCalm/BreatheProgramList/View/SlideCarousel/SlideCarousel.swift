@@ -12,38 +12,42 @@ struct SlideCarouselList: View {
     @State var currentIndex: Int
     var body: some View {
         NavigationView {
-            VStack(alignment: .center) {
-                HStack {
-                    Text("Техники дыхания")
-                        .font(.title2)
-                        .foregroundColor(.gray)
-                        .padding(.top, 32)
-                        .padding(.leading, 16)
-                }
-                SlideCarousel<SlideCard, BreatheProgram>(content: { program in
-                    SlideCard(program: program)
-                }, list: viewModel.models.map {$0.program},
-                                                       spacing: 16,
-                                                       trailingSpace: 32,
-                                                       index: $currentIndex)
-                .padding()
-                ProgramsPreview(program: viewModel.models[currentIndex].program)
-                    .animation(.easeOut(duration: 0.1) , value: currentIndex)
-                    .padding()
-                HStack(spacing: 10) {
-                    ForEach(viewModel.models.indices, id: \.self) { index in
-                        Circle()
-                            .fill(.black.opacity(currentIndex == index ? 1 : 0.1))
-                            .frame(8, 8)
-                            .scaleEffect(currentIndex == index ? 1.5 : 1)
-                            .animation(.spring(), value: currentIndex == index)
+            GeometryReader { proxy in
+                VStack(alignment: .center) {
+                    HStack {
+                        Text("Техники дыхания")
+                            .font(.title2)
+                            .foregroundColor(.gray)
+                            .padding(.bottom, 16)
+                            .padding(.leading, 16)
                     }
+                    .padding(.top, 40)
+                    SlideCarousel<SlideCard, BreatheProgram>(content: { program in
+                        SlideCard(program: program)
+                    }, list: viewModel.models.map {$0.program},
+                                                           spacing: 16,
+                                                           trailingSpace: 32,
+                                                           index: $currentIndex)
+                    .frame(proxy.width * 0.94, proxy.height * 0.6)
+                    .padding(.top, 16)
+                    ProgramsPreview(program: viewModel.models[currentIndex].program)
+                        .animation(.easeOut(duration: 0.1) , value: currentIndex)
+                        .frame(proxy.width * 0.5, proxy.height * 0.2)
+                    HStack(spacing: 10) {
+                        ForEach(viewModel.models.indices, id: \.self) { index in
+                            Circle()
+                                .fill(.black.opacity(currentIndex == index ? 1 : 0.1))
+                                .frame(8, 8)
+                                .scaleEffect(currentIndex == index ? 1.5 : 1)
+                                .animation(.spring(), value: currentIndex == index)
+                        }
+                    }
+                    .padding()
                 }
-                .padding()
+                
+                .navigationBarHidden(true)
+                .navigationTitle("")
             }
-            
-            .navigationBarHidden(true)
-            .navigationTitle("")
         }
         .accentColor(.white)
         .preferredColorScheme(.light)
@@ -63,13 +67,12 @@ struct SlideCard: View {
     var body: some View {
         GeometryReader { proxy in
             if #available(iOS 15.0, *) {
-                
                 ZStack {
                     if #available(iOS 15.0, *) {
                         Image(program.image)
                             .resizable()
                             .aspectRatio(contentMode: .fill)
-                            .frame(proxy.height * 0.85, proxy.height)
+                            .frame(proxy.width * 0.9, proxy.height)
                             .overlay(LinearGradient(colors: [.clear, .clear, .black.opacity(0.8)], startPoint: .top, endPoint: .bottom))
                             .cornerRadius(40)
                     } else {
@@ -108,10 +111,10 @@ struct SlideCard: View {
 struct ProgramsPreview: View {
     var program: BreatheProgram
     var body: some View {
-        HStack {
+        HStack(spacing: 2) {
             let stagesCount = program.stages.count / program.laps
             ForEach(0...stagesCount - 1, id: \.self) { index in
-                VStack(spacing: 32) {
+                VStack(spacing: 24) {
                     let stage = program.stages[index]
                     Text(stage.getTitle())
                         .align(.center)
@@ -130,6 +133,8 @@ struct ProgramsPreview: View {
             }
         }
         .fixedSize(horizontal: false, vertical: true)
+        .padding(.trailing, 32)
+        .padding(.leading, 32)
     }
 }
 
@@ -163,12 +168,11 @@ struct SlideCarousel<Content: View, T: Identifiable >: View {
             HStack(spacing: spacing * 2) {
                 ForEach(list) { item in
                     content(item)
-                        .frame(width - trailingSpace)
+                        .frame(width - trailingSpace, proxy.height * 0.85)
                 }
             }
             .padding(.horizontal, spacing)
             .offset(offset - CGFloat(currentIndex) * width, 0)
-            
             .gesture(DragGesture()
                 .updating($offset, body: { value, out, _ in
                     out = value.translation.width
