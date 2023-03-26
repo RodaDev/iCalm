@@ -5,7 +5,7 @@
 //  Created by Rodevelop on 28.09.2022.
 //
 
-import SwiftUI
+@_exported import SwiftUI
 
 struct ContentView: View {
     var body: some View {
