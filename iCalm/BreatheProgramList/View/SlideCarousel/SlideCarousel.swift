@@ -15,7 +15,7 @@ struct SlideCarouselList: View {
             GeometryReader { proxy in
                 VStack(alignment: .center) {
                     HStack {
-                        Text("Техники дыхания")
+                        Text("Breathingtechniques.Title")
                             .font(.title2)
                             .foregroundColor(.gray)
                             .padding(.bottom, 16)
@@ -123,7 +123,7 @@ struct ProgramsPreview: View {
                     stage.getImage()
                         .foregroundColor(.gray)
                         .frame(80, 22)
-                    Text("\(stage.interval) сек.")
+                    Text("Seconds.key \(stage.interval)")
                         .font(.body)
                         .foregroundColor(.gray)
                         .align(.center)

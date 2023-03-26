@@ -22,7 +22,7 @@ class BreatheViewModel: BreatheViewModelProtocol, ObservableObject {
                 } else {
                     return String("00:\(currentProgramCount)")
                 }
-            case .stop:
+            case .stop, .wait:
                 return "00:00"
             }
         }
@@ -32,12 +32,12 @@ class BreatheViewModel: BreatheViewModelProtocol, ObservableObject {
         get {
             switch currentStage.type {
             case .outPause, .inPause:
-                return "Задержите дыхание"
+                return String(localized: "HoldBreathe.key")
             case .breatheIn:
-                return "Вдыхайте"
+                return String(localized: "Inhale.key")
             case .breatheOut:
-                return "Выдыхайте"
-            case .stop:
+                return String(localized: "Exhale.key")
+            case .stop, .wait:
                 return ""
             }
         }
@@ -70,7 +70,7 @@ class BreatheViewModel: BreatheViewModelProtocol, ObservableObject {
     
     func clickButton() {
         switch currentStage.type {
-        case .breatheOut, .breatheIn, .inPause, .outPause:
+        case .breatheOut, .breatheIn, .inPause, .outPause, .wait:
             stop()
         case .stop:
             start()
@@ -80,12 +80,12 @@ class BreatheViewModel: BreatheViewModelProtocol, ObservableObject {
     private func start() {
         var counter = 0
         currentIndex = 0
-        buttonTitle = "Stop"
+        currentStage = BreatheStage(type: .wait, interval: 1)
+        
         guard let firstStage = breatheModel.program.stages.first else {
             return
         }
         generator.selectionChanged()
-        self.currentStage = firstStage
         timerPublisher
             .autoconnect()
             .map({ date -> Void in
@@ -97,6 +97,7 @@ class BreatheViewModel: BreatheViewModelProtocol, ObservableObject {
                     self.stop()
                     return
                 }
+                self.currentStage = firstStage
                 let timeStamp = self.timeStamps[self.currentIndex]
                 let currentProgram = stages[self.currentIndex]
                 self.currentProgramCount = timeStamp - counter + 1
@@ -108,8 +109,6 @@ class BreatheViewModel: BreatheViewModelProtocol, ObservableObject {
                 if counter == timeStamp {
                     self.currentIndex += 1
                 }
-                
-                print("counter = \(counter) currentProgramCount = \(self.currentProgramCount) program = \(self.currentProgramType)")
             })
             
             .store(in: &cancellable)

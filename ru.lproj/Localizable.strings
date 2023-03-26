@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  iCalm
+
+  Created by Dmitry Sharygin on 26.03.2023.
+  
+*/
+
+"Breathingtechniques.Title" = "Техники дыхания";
+"Seconds.key %lld" = " %lld сек.";
+"Inhale.key" = "Вдох";
+"Exhale.key" = "Выдох";
+"HoldBreathe.key" = "Задержите дыхание";
+"GetReady.key" = "ПРИГОВЬТЕСЬ";
+"Start.key" = "СТАРТ";

@@ -16,6 +16,7 @@
 		3AD17EB9293C0A3E005EC5C1 /* BreatheViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD17EB8293C0A3E005EC5C1 /* BreatheViewModelProtocol.swift */; };
 		3AD17EBB293CBBD5005EC5C1 /* BreatheViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD17EBA293CBBD5005EC5C1 /* BreatheViewProtocol.swift */; };
 		3AD17EBD293CBFC3005EC5C1 /* BreatheViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD17EBC293CBFC3005EC5C1 /* BreatheViewModel.swift */; };
+		6D093EC429D0E9D5006F3F50 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6D093EC629D0E9D5006F3F50 /* Localizable.strings */; };
 		6D48E0BC2999645400847FA4 /* BreatheProgramListViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D48E0BB2999645400847FA4 /* BreatheProgramListViewModelProtocol.swift */; };
 		6D48E0BE2999648500847FA4 /* BreatheProgramListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D48E0BD2999648500847FA4 /* BreatheProgramListViewModel.swift */; };
 		6D50F07429A764E1000DBD23 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D50F07329A764E1000DBD23 /* MockData.swift */; };
@@ -36,6 +37,9 @@
 		3AD17EB8293C0A3E005EC5C1 /* BreatheViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreatheViewModelProtocol.swift; sourceTree = "<group>"; };
 		3AD17EBA293CBBD5005EC5C1 /* BreatheViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreatheViewProtocol.swift; sourceTree = "<group>"; };
 		3AD17EBC293CBFC3005EC5C1 /* BreatheViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreatheViewModel.swift; sourceTree = "<group>"; };
+		6D093EC129CE59B2006F3F50 /* ------------Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "------------Info.plist"; sourceTree = "<group>"; };
+		6D093EC529D0E9D5006F3F50 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6D093EC729D0E9D9006F3F50 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6D48E0BB2999645400847FA4 /* BreatheProgramListViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreatheProgramListViewModelProtocol.swift; sourceTree = "<group>"; };
 		6D48E0BD2999648500847FA4 /* BreatheProgramListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreatheProgramListViewModel.swift; sourceTree = "<group>"; };
 		6D50F07329A764E1000DBD23 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
@@ -95,6 +99,8 @@
 		3A8BC49828E3D55500E3AF07 = {
 			isa = PBXGroup;
 			children = (
+				6D093EC629D0E9D5006F3F50 /* Localizable.strings */,
+				6D093EC129CE59B2006F3F50 /* ------------Info.plist */,
 				3A8BC4A328E3D55500E3AF07 /* iCalm */,
 				3A8BC4A228E3D55500E3AF07 /* Products */,
 			);
@@ -235,6 +241,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 3A8BC49828E3D55500E3AF07;
 			packageReferences = (
@@ -255,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A8BC4AC28E3D55700E3AF07 /* Preview Assets.xcassets in Resources */,
+				6D093EC429D0E9D5006F3F50 /* Localizable.strings in Resources */,
 				3A8BC4A928E3D55700E3AF07 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +291,18 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6D093EC629D0E9D5006F3F50 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6D093EC529D0E9D5006F3F50 /* en */,
+				6D093EC729D0E9D9006F3F50 /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		3A8BC4AD28E3D55700E3AF07 /* Debug */ = {
@@ -412,9 +432,10 @@
 				DEVELOPMENT_TEAM = P4MDXR8V44;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "------------Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -445,9 +466,10 @@
 				DEVELOPMENT_TEAM = P4MDXR8V44;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "------------Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;

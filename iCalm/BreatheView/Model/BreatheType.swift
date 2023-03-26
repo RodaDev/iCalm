@@ -40,12 +40,14 @@ class BreatheStage: ObservableObject {
     
     func getTitle() -> String {
         switch type {
+        case.wait :
+            return "Готовимся"
         case .outPause, .inPause:
             return "Пауза"
         case .breatheIn:
-            return "Вдох"
+            return String(localized: "Inhale.key")
         case .breatheOut:
-            return "Выдох"
+            return String(localized: "Exhale.key")
         case .stop:
             return ""
         }
@@ -67,6 +69,7 @@ class BreatheStage: ObservableObject {
 }
 
 enum BreatheType: String {
+    case wait
     case stop
     case breatheIn
     case breatheOut

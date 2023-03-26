@@ -95,7 +95,7 @@ struct BreatheView<ViewModelProtocol>: View where ViewModelProtocol: BreatheView
         switch viewModel.currentBreatheStage().type {
         case .breatheIn, .inPause:
             return maxSize
-        case.breatheOut, .outPause, .stop:
+        case .breatheOut, .outPause, .stop, .wait:
             return minSize
         }
     }
@@ -115,14 +115,22 @@ struct BreatheView<ViewModelProtocol>: View where ViewModelProtocol: BreatheView
             switch viewModel.currentBreatheStage().type {
             case .stop:
                 getStartText()
+            case .wait:
+                getWaitText()
             default:
                 getBreatheSourceView()
             }
         }
     }
     
+    private func getWaitText() -> some View {
+        Text("GetReady.key")
+            .font(.system(size: 18, weight: .bold))
+            .foregroundColor(.white)
+    }
+    
     private func getStartText() -> some View {
-        Text("Старт".uppercased())
+        Text("Start.key")
             .font(.system(size: 18, weight: .bold))
             .foregroundColor(.white)
     }
@@ -131,7 +139,7 @@ struct BreatheView<ViewModelProtocol>: View where ViewModelProtocol: BreatheView
         switch viewModel.currentBreatheStage().type {
         case .breatheIn, .inPause:
             return getSize() / 2
-        case.breatheOut, .stop , .outPause:
+        case.breatheOut, .stop , .outPause, .wait:
             return 0
         }
     }
@@ -140,7 +148,7 @@ struct BreatheView<ViewModelProtocol>: View where ViewModelProtocol: BreatheView
         switch viewModel.currentBreatheStage().type {
         case .breatheIn, .inPause:
             return maxSize * 2.03
-        case.breatheOut, .outPause, .stop:
+        case.breatheOut, .outPause, .stop, .wait:
             return minSize * 1.15
         }
     }
@@ -149,7 +157,7 @@ struct BreatheView<ViewModelProtocol>: View where ViewModelProtocol: BreatheView
         switch viewModel.currentBreatheStage().type {
         case .breatheIn, .inPause:
             return 3
-        case.breatheOut, .stop , .outPause:
+        case.breatheOut, .stop , .outPause, .wait:
             return 8
         }
     }
@@ -159,7 +167,7 @@ struct BreatheView<ViewModelProtocol>: View where ViewModelProtocol: BreatheView
         switch viewModel.currentBreatheStage().type {
         case .breatheIn, .inPause:
             return 0.3
-        case.breatheOut, .stop , .outPause:
+        case.breatheOut, .stop , .outPause, .wait:
             return 0.2
         }
     }
@@ -175,23 +183,8 @@ struct BreatheView<ViewModelProtocol>: View where ViewModelProtocol: BreatheView
                         .offset(y: -50)
                         .frame(width: size.width, height: size.height, alignment: .center)
                         .clipped()
-                        .blur(radius: 1.2)
                         .overlay {
-                            ZStack {
-                                Rectangle()
-                                    .fill(viewModel.gradient)
-                                    .frame(height: size.height / 1.5, alignment: .top)
-                                    .frame(maxHeight: .infinity, alignment: .top)
-    
-                                Rectangle()
-                                    .fill(.linearGradient(colors: [.clear,
-                                                                   .clear,
-                                                                   .black.opacity(0.8),
-                                                                   .black,
-                                                                   .black], startPoint: .top, endPoint: .bottom))
-                                    .frame(height: size.height / 1.25, alignment: .top)
-                                    .frame(maxHeight: .infinity, alignment: .bottom)
-                            }
+                            LinearGradient(colors: [.clear, .black.opacity(0.3), .black.opacity(0.5),.black.opacity(0.8), .black.opacity(0.9)], startPoint: .top, endPoint: .bottom)
                         }
                 } else {}
             }
