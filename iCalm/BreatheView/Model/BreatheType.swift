@@ -41,9 +41,9 @@ class BreatheStage: ObservableObject {
     func getTitle() -> String {
         switch type {
         case.wait :
-            return "Готовимся"
+            return String(localized: "GetReady.key")
         case .outPause, .inPause:
-            return "Пауза"
+            return String(localized: "Pause.key")
         case .breatheIn:
             return String(localized: "Inhale.key")
         case .breatheOut:

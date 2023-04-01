@@ -7,9 +7,10 @@
 */
 
 "Breathingtechniques.Title" = "Breathing Techniques";
-"Seconds.key %@" = " %@ sec.";
+"Seconds.key %lld" = " %lld sec.";
 "Inhale.key" = "Inhale";
 "Exhale.key" = "Exhale";
+"Pause.key" = "Pause";
 "HoldBreathe.key" = "Hold the breath";
 "GetReady.key" = "GET READY";
 "Start.key" = "START";
