@@ -10,7 +10,7 @@
 struct ContentView: View {
     var body: some View {
 
-        SlideCarouselList(viewModel: mockBreatheProgramListViewModel, currentIndex: 0)
+        SplashView(mainView: SlideCarouselList(viewModel: mockBreatheProgramListViewModel, currentIndex: 0))
     }
 }
 

@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "fotor_2023-4-2_21_28_52 2.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "fotor_2023-4-2_21_28_52.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "fotor_2023-4-2_21_28_52 1.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

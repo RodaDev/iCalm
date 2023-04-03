@@ -8,7 +8,6 @@
 struct SlideCarouselList: View {
     @ObservedObject var viewModel: BreatheProgramListViewModel
     @State var currentIndex: Int
-    @State private var initOffset: CGFloat = 5000
     var body: some View {
         NavigationView {
             GeometryReader { proxy in
@@ -42,13 +41,6 @@ struct SlideCarouselList: View {
                         }
                     }
                     .padding()
-                    .padding(.horizontal, initOffset)
-                    .onAppear {
-                        let animation = Animation.easeInOut(duration: 0.7)
-                        withAnimation(animation) {
-                            initOffset = 0
-                        }
-                    }
                 }
                 .navigationBarHidden(true)
                 .navigationTitle("")
