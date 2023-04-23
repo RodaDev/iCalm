@@ -55,12 +55,14 @@ class BreatheViewModel: BreatheViewModelProtocol, ObservableObject {
     @Published var currentProgramCount: Int = 0
     @Published var currentProgramType: String = ""
     @Published var backgroundImageName: String
+    @Published var currentProgress: Float = 0
     
     private var currentIndex = 0
     private var cancellable = Set<AnyCancellable>()
     private var counter = 0
     lazy private var timerPublisher: Timer.TimerPublisher = getTimerPublisher()
     lazy private var timeStamps = getTimeStamps()
+    lazy private var length = getFullLength()
     
     init(breatheModel: BreatheModel) {
         self.breatheModel = breatheModel
@@ -80,6 +82,7 @@ class BreatheViewModel: BreatheViewModelProtocol, ObservableObject {
     private func start() {
         var counter = 0
         currentIndex = 0
+        currentProgress = 0
         currentStage = BreatheStage(type: .wait, interval: 1)
         
         guard let firstStage = breatheModel.program.stages.first else {
@@ -93,6 +96,7 @@ class BreatheViewModel: BreatheViewModelProtocol, ObservableObject {
             })
             .sink(receiveValue: { val in
                 let stages = self.breatheModel.program.stages
+                self.currentProgress = Float(counter - 1) / self.length
                 if stages.count == self.currentIndex {
                     self.stop()
                     return
@@ -138,6 +142,11 @@ class BreatheViewModel: BreatheViewModelProtocol, ObservableObject {
             result.append(val)
         }
         return result
+    }
+    
+    private func getFullLength() -> Float {
+        let intervals = breatheModel.program.stages.map { $0.interval }
+        return Float(intervals.reduce(0, +))
     }
     
     func currentBreatheStage() -> BreatheStage {

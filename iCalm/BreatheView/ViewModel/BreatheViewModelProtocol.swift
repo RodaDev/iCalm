@@ -19,4 +19,5 @@ protocol BreatheViewModelProtocol: ObservableObject {
     var counterText: String { get }
     var statusText: String { get }
     var backgroundImageName: String { get }
+    var currentProgress: Float { get }
 }

@@ -26,6 +26,7 @@
 		6D6FF28F29BBDC3D00D66534 /* SlideCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6FF28E29BBDC3D00D66534 /* SlideCarousel.swift */; };
 		6D76C76829DA03A2007C7974 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D76C76729DA03A2007C7974 /* Launch Screen.storyboard */; };
 		6D76C76B29DB1BB3007C7974 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D76C76A29DB1BB3007C7974 /* SplashView.swift */; };
+		6D76C76E29F5E4F8007C7974 /* CircleProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D76C76D29F5E4F8007C7974 /* CircleProgressBar.swift */; };
 		6DEC5EF029731FC40050750A /* PureSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 6DEC5EEF29731FC40050750A /* PureSwiftUI */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 		6D6FF28E29BBDC3D00D66534 /* SlideCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideCarousel.swift; sourceTree = "<group>"; };
 		6D76C76729DA03A2007C7974 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		6D76C76A29DB1BB3007C7974 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		6D76C76D29F5E4F8007C7974 /* CircleProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgressBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 		3A8BC4A328E3D55500E3AF07 /* iCalm */ = {
 			isa = PBXGroup;
 			children = (
+				6D76C76C29F5E4D9007C7974 /* CustomViews */,
 				6D76C76929DB1B09007C7974 /* SplashView */,
 				6D50F07229A764C7000DBD23 /* MockData */,
 				6D69B6D9298E662B00E46C2F /* BreatheProgramList */,
@@ -203,6 +206,14 @@
 				6D76C76A29DB1BB3007C7974 /* SplashView.swift */,
 			);
 			path = SplashView;
+			sourceTree = "<group>";
+		};
+		6D76C76C29F5E4D9007C7974 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				6D76C76D29F5E4F8007C7974 /* CircleProgressBar.swift */,
+			);
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,6 +309,7 @@
 				3A07B7D528E88A76007FEA2C /* BreatheType.swift in Sources */,
 				3AD17EBB293CBBD5005EC5C1 /* BreatheViewProtocol.swift in Sources */,
 				3A8BC4A528E3D55500E3AF07 /* iCalmApp.swift in Sources */,
+				6D76C76E29F5E4F8007C7974 /* CircleProgressBar.swift in Sources */,
 				6D48E0BE2999648500847FA4 /* BreatheProgramListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

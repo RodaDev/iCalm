@@ -25,12 +25,16 @@ struct BreatheView<ViewModelProtocol>: View where ViewModelProtocol: BreatheView
                 ZStack {
                     getGhostView()
                         .animation(.easeOut(duration: Double(viewModel.currentBreatheStage().interval)).delay(0.4))
+                    
                     getBreatheCirclesView()
                         .padding()
                         .animation(.easeInOut(duration: Double(viewModel.currentBreatheStage().interval)))
                         .frameIf(viewModel.currentBreatheStage().type == .breatheIn, getSize() * 2)
                         .frameIf(viewModel.currentBreatheStage().type == .breatheOut, getSize())
                     getInsideCirclesTextView()
+                    CircleProgressBar(progress: $viewModel.currentProgress)
+                        .frame(minSize * 0.55)
+                        .opacity(0.7)
                     VStack {
                         Spacer(minLength: 250)
                         getCountIndicator()
@@ -63,14 +67,14 @@ struct BreatheView<ViewModelProtocol>: View where ViewModelProtocol: BreatheView
                     .frame(getSize())
                     .offset(x: CGFloat(getXOffset()))
                     .rotationEffect(.degrees(Double(Int(360.0) / circlesCount * $0)))
-                    .blur(8)
+                    .blur(4)
                     .blendMode(.screen)
             }
             Circle()
                 .fill(Color.cgDarkGray)
                 .frame(minSize * 0.6)
                 .opacity(0.5)
-                .blur(8)
+                .blur(4)
         }
     }
     
