@@ -20,20 +20,23 @@ struct SplashView<Content: View>: View {
             Image("MainIconSmall")
                 .resizable()
                 .frame(128, 128)
-                .scaleEffect(isVisible ? 0.9 : 1.0)
+                .scaleEffect(isVisible ? 0.85 : 1.0)
                 .opacity(mainIsVisible ? 0 : 1)
             VStack {
                 Spacer()
                 if isVisible && !mainIsVisible {
                     Spacer()
-                    Text("Просто\n дыши").foregroundColor(.gray)
+                    Text(String(localized: "JustBreathe.Title"))
+                        .foregroundColor(.gray)
+                        .align(.center)
                         .font(.system(size: 28,
                                       weight: .regular,
                                       design: .serif))
+                        .padding(.top, 80)
                         .padding()
                         .transition(.opacity)
                     Spacer()
-                    Text("От Евгении Шарыгиной")
+                    Text(String(localized: "CreatedBy.Title"))
                         .foregroundColor(.gray)
                         .font(.system(size: 20,
                                       weight: .light,
@@ -44,14 +47,13 @@ struct SplashView<Content: View>: View {
             }
         }
         .onAppear {
-            let animation = Animation.easeOut(duration: 0.5)
+            let animation = Animation.easeOut(duration: 0.3).delay(0.3)
             withAnimation(animation) {
                 isVisible = true
             }
-            let mainAnimation = Animation.easeIn(duration: 0.2).delay(1.5)
+            let mainAnimation = Animation.easeIn(duration: 0.3).delay(1.5)
             withAnimation(mainAnimation){
                 mainIsVisible = true
-                //isVisible = false
             }
         }
     }

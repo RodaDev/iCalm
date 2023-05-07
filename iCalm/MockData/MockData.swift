@@ -13,7 +13,7 @@ let firstPrStages = [BreatheStage(type: .breatheIn, interval: 4, source: .nose),
                      BreatheStage(type: .outPause, interval: 2, source: .mouth)]
 let firstBreatheModel = BreatheModel(program: .init(title: "Снятие напряжения",
                                                     stages:firstPrStages,
-                                                    laps: 1,
+                                                    laps: 6,
                                                     image: "swing"),
                                      colorStart: .pink,
                                      colorEnd: .cgCyan)
