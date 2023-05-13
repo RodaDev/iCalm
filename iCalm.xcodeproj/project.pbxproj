@@ -20,6 +20,7 @@
 		6D093EC929D0F7E9006F3F50 /* SlideCarouselList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D093EC829D0F7E9006F3F50 /* SlideCarouselList.swift */; };
 		6D093ECB29D0F82A006F3F50 /* SlideCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D093ECA29D0F82A006F3F50 /* SlideCard.swift */; };
 		6D093ECD29D0FA32006F3F50 /* ProgramsPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D093ECC29D0FA32006F3F50 /* ProgramsPreview.swift */; };
+		6D246E3C2A102D4E0050ADD9 /* ------------Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6D246E3B2A102D4D0050ADD9 /* ------------Info.plist */; };
 		6D48E0BC2999645400847FA4 /* BreatheProgramListViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D48E0BB2999645400847FA4 /* BreatheProgramListViewModelProtocol.swift */; };
 		6D48E0BE2999648500847FA4 /* BreatheProgramListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D48E0BD2999648500847FA4 /* BreatheProgramListViewModel.swift */; };
 		6D50F07429A764E1000DBD23 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D50F07329A764E1000DBD23 /* MockData.swift */; };
@@ -41,12 +42,12 @@
 		3AD17EB8293C0A3E005EC5C1 /* BreatheViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreatheViewModelProtocol.swift; sourceTree = "<group>"; };
 		3AD17EBA293CBBD5005EC5C1 /* BreatheViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreatheViewProtocol.swift; sourceTree = "<group>"; };
 		3AD17EBC293CBFC3005EC5C1 /* BreatheViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreatheViewModel.swift; sourceTree = "<group>"; };
-		6D093EC129CE59B2006F3F50 /* ------------Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "------------Info.plist"; sourceTree = "<group>"; };
 		6D093EC529D0E9D5006F3F50 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6D093EC729D0E9D9006F3F50 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6D093EC829D0F7E9006F3F50 /* SlideCarouselList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideCarouselList.swift; sourceTree = "<group>"; };
 		6D093ECA29D0F82A006F3F50 /* SlideCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideCard.swift; sourceTree = "<group>"; };
 		6D093ECC29D0FA32006F3F50 /* ProgramsPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramsPreview.swift; sourceTree = "<group>"; };
+		6D246E3B2A102D4D0050ADD9 /* ------------Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "------------Info.plist"; sourceTree = "<group>"; };
 		6D48E0BB2999645400847FA4 /* BreatheProgramListViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreatheProgramListViewModelProtocol.swift; sourceTree = "<group>"; };
 		6D48E0BD2999648500847FA4 /* BreatheProgramListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreatheProgramListViewModel.swift; sourceTree = "<group>"; };
 		6D50F07329A764E1000DBD23 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
@@ -109,7 +110,7 @@
 			children = (
 				6D76C76729DA03A2007C7974 /* Launch Screen.storyboard */,
 				6D093EC629D0E9D5006F3F50 /* Localizable.strings */,
-				6D093EC129CE59B2006F3F50 /* ------------Info.plist */,
+				6D246E3B2A102D4D0050ADD9 /* ------------Info.plist */,
 				3A8BC4A328E3D55500E3AF07 /* iCalm */,
 				3A8BC4A228E3D55500E3AF07 /* Products */,
 			);
@@ -283,6 +284,7 @@
 			files = (
 				3A8BC4AC28E3D55700E3AF07 /* Preview Assets.xcassets in Resources */,
 				6D093EC429D0E9D5006F3F50 /* Localizable.strings in Resources */,
+				6D246E3C2A102D4E0050ADD9 /* ------------Info.plist in Resources */,
 				6D76C76829DA03A2007C7974 /* Launch Screen.storyboard in Resources */,
 				3A8BC4A928E3D55700E3AF07 /* Assets.xcassets in Resources */,
 			);
