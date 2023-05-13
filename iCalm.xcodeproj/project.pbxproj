@@ -41,7 +41,6 @@
 		3AD17EB8293C0A3E005EC5C1 /* BreatheViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreatheViewModelProtocol.swift; sourceTree = "<group>"; };
 		3AD17EBA293CBBD5005EC5C1 /* BreatheViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreatheViewProtocol.swift; sourceTree = "<group>"; };
 		3AD17EBC293CBFC3005EC5C1 /* BreatheViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreatheViewModel.swift; sourceTree = "<group>"; };
-		6D093EC129CE59B2006F3F50 /* ------------Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "------------Info.plist"; sourceTree = "<group>"; };
 		6D093EC529D0E9D5006F3F50 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6D093EC729D0E9D9006F3F50 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6D093EC829D0F7E9006F3F50 /* SlideCarouselList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideCarouselList.swift; sourceTree = "<group>"; };
@@ -109,7 +108,6 @@
 			children = (
 				6D76C76729DA03A2007C7974 /* Launch Screen.storyboard */,
 				6D093EC629D0E9D5006F3F50 /* Localizable.strings */,
-				6D093EC129CE59B2006F3F50 /* ------------Info.plist */,
 				3A8BC4A328E3D55500E3AF07 /* iCalm */,
 				3A8BC4A228E3D55500E3AF07 /* Products */,
 			);
