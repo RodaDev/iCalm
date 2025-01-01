@@ -10,6 +10,11 @@ import FirebaseCore
 
 @main
 struct iCalmApp: App {
+    
+    init() {
+        FirebaseApp.configure()
+      }
+
     var body: some Scene {
         WindowGroup {
             ContentView()

@@ -30,6 +30,11 @@
 		6D48E0BC2999645400847FA4 /* BreatheProgramListViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D48E0BB2999645400847FA4 /* BreatheProgramListViewModelProtocol.swift */; };
 		6D48E0BE2999648500847FA4 /* BreatheProgramListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D48E0BD2999648500847FA4 /* BreatheProgramListViewModel.swift */; };
 		6D50F07429A764E1000DBD23 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D50F07329A764E1000DBD23 /* MockData.swift */; };
+		6D686B462CF301B200ECF012 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 6D686B452CF301B200ECF012 /* FirebaseAuth */; };
+		6D686B482CF301B200ECF012 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 6D686B472CF301B200ECF012 /* FirebaseCrashlytics */; };
+		6D686B4A2CF301B200ECF012 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 6D686B492CF301B200ECF012 /* FirebaseDatabase */; };
+		6D686B4C2CF301B200ECF012 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 6D686B4B2CF301B200ECF012 /* FirebaseFirestore */; };
+		6D686B4E2CF301B200ECF012 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6D686B4D2CF301B200ECF012 /* FirebaseFirestoreSwift */; };
 		6D6FF28F29BBDC3D00D66534 /* SlideCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6FF28E29BBDC3D00D66534 /* SlideCarousel.swift */; };
 		6D76C76829DA03A2007C7974 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D76C76729DA03A2007C7974 /* Launch Screen.storyboard */; };
 		6D76C76B29DB1BB3007C7974 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D76C76A29DB1BB3007C7974 /* SplashView.swift */; };
@@ -72,8 +77,13 @@
 				6D12C7552BDF0ADE00F166DB /* FirebaseAnalyticsSwift in Frameworks */,
 				6D12C7572BDF0ADE00F166DB /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 				6D12C7512BDF0ADE00F166DB /* FirebaseAnalytics in Frameworks */,
+				6D686B4C2CF301B200ECF012 /* FirebaseFirestore in Frameworks */,
 				6D12C7532BDF0ADE00F166DB /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
+				6D686B4E2CF301B200ECF012 /* FirebaseFirestoreSwift in Frameworks */,
 				6D12C7592BDF0ADE00F166DB /* FirebaseAppCheck in Frameworks */,
+				6D686B482CF301B200ECF012 /* FirebaseCrashlytics in Frameworks */,
+				6D686B4A2CF301B200ECF012 /* FirebaseDatabase in Frameworks */,
+				6D686B462CF301B200ECF012 /* FirebaseAuth in Frameworks */,
 				6DEC5EF029731FC40050750A /* PureSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +149,7 @@
 		3A8BC4A328E3D55500E3AF07 /* iCalm */ = {
 			isa = PBXGroup;
 			children = (
+				6D686B412CF3007D00ECF012 /* Services */,
 				6D12C74D2BDF094F00F166DB /* GoogleService-Info.plist */,
 				6D76C76C29F5E4D9007C7974 /* CustomViews */,
 				6D76C76929DB1B09007C7974 /* SplashView */,
@@ -167,6 +178,13 @@
 				6D50F07329A764E1000DBD23 /* MockData.swift */,
 			);
 			path = MockData;
+			sourceTree = "<group>";
+		};
+		6D686B412CF3007D00ECF012 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		6D69B6D9298E662B00E46C2F /* BreatheProgramList */ = {
@@ -240,6 +258,7 @@
 				3A8BC49D28E3D55500E3AF07 /* Sources */,
 				3A8BC49E28E3D55500E3AF07 /* Frameworks */,
 				3A8BC49F28E3D55500E3AF07 /* Resources */,
+				6D58B83B2D25EE910018D76F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -253,6 +272,11 @@
 				6D12C7542BDF0ADE00F166DB /* FirebaseAnalyticsSwift */,
 				6D12C7562BDF0ADE00F166DB /* FirebaseAnalyticsWithoutAdIdSupport */,
 				6D12C7582BDF0ADE00F166DB /* FirebaseAppCheck */,
+				6D686B452CF301B200ECF012 /* FirebaseAuth */,
+				6D686B472CF301B200ECF012 /* FirebaseCrashlytics */,
+				6D686B492CF301B200ECF012 /* FirebaseDatabase */,
+				6D686B4B2CF301B200ECF012 /* FirebaseFirestore */,
+				6D686B4D2CF301B200ECF012 /* FirebaseFirestoreSwift */,
 			);
 			productName = iCalm;
 			productReference = 3A8BC4A128E3D55500E3AF07 /* Просто Дыши.app */;
@@ -311,6 +335,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6D58B83B2D25EE910018D76F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}",
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${PRODUCT_NAME}",
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Info.plist",
+				"$(TARGET_BUILD_DIR)/$(EXECUTABLE_PATH)",
+				"$(TARGET_BUILD_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/GoogleService-Info.plist",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3A8BC49D28E3D55500E3AF07 /* Sources */ = {
@@ -385,7 +434,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -475,7 +524,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 0;
 				DEVELOPMENT_ASSET_PATHS = "\"iCalm/Preview Content\"";
-				DEVELOPMENT_TEAM = P4MDXR8V44;
+				DEVELOPMENT_TEAM = 8QFJA27NFJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "------------Info.plist";
@@ -490,7 +539,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.01;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = rodadev.com.iCalm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -525,7 +574,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.01;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = rodadev.com.iCalm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -604,6 +653,26 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 6D12C74F2BDF0ADE00F166DB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAppCheck;
+		};
+		6D686B452CF301B200ECF012 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FirebaseAuth;
+		};
+		6D686B472CF301B200ECF012 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FirebaseCrashlytics;
+		};
+		6D686B492CF301B200ECF012 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FirebaseDatabase;
+		};
+		6D686B4B2CF301B200ECF012 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FirebaseFirestore;
+		};
+		6D686B4D2CF301B200ECF012 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FirebaseFirestoreSwift;
 		};
 		6DEC5EEF29731FC40050750A /* PureSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
