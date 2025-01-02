@@ -37,4 +37,4 @@ let forthPrStages = [BreatheStage(type: .breatheIn, interval: 7, source: .nose),
 let forthBreatheModel = BreatheModel(program: .init(title: "Остановка паники", stages: forthPrStages, laps: 6, image: "house"), colorStart: .green, colorEnd: .cgCyan)
 
 let testModels = [firstBreatheModel, secondBreatheModel, thirdBreatheModel, forthBreatheModel]
-let mockBreatheProgramListViewModel = BreatheProgramListViewModel(models: testModels)
+let mockBreatheProgramListViewModel = BreatheProgramListViewModel(models: testModels, analyticsManager: FirebaseAnalyticsManager.shared)

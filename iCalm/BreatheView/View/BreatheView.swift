@@ -53,6 +53,9 @@ struct BreatheView<ViewModelProtocol>: View where ViewModelProtocol: BreatheView
                     viewModel.clickButton()
                 }
             }
+        .onAppear() {
+            viewModel.logOpened()
+        }
         .onDisappear() {
             viewModel.stop()
         }

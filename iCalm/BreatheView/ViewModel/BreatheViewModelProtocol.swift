@@ -12,6 +12,7 @@ protocol BreatheViewModelProtocol: ObservableObject {
     func clickButton()
     func currentBreatheStage() -> BreatheStage
     func stop()
+    func logOpened()
     var currentProgramCount: Int { get }
     var currentProgramType: String { get }
     var buttonTitle: String { get }

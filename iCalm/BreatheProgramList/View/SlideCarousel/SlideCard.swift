@@ -39,7 +39,7 @@ struct SlideCard: View {
                 }
                 .background {
                     NavigationLink("", isActive: $isActive) {
-                        BreatheView<BreatheViewModel>(viewModel: BreatheViewModel(breatheModel: BreatheModel(program: program, colorStart: .blue, colorEnd: .purple)))
+                        BreatheView<BreatheViewModel>(viewModel: BreatheViewModel(breatheModel: BreatheModel(program: program, colorStart: .blue, colorEnd: .purple), analyticsManager: FirebaseAnalyticsManager.shared)) // TODO:  перенести analyticsManager
                     }
                     .navigationTitle("")
                 }

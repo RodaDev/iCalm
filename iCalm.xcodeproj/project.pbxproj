@@ -30,6 +30,8 @@
 		6D48E0BC2999645400847FA4 /* BreatheProgramListViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D48E0BB2999645400847FA4 /* BreatheProgramListViewModelProtocol.swift */; };
 		6D48E0BE2999648500847FA4 /* BreatheProgramListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D48E0BD2999648500847FA4 /* BreatheProgramListViewModel.swift */; };
 		6D50F07429A764E1000DBD23 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D50F07329A764E1000DBD23 /* MockData.swift */; };
+		6D58B83E2D26F7630018D76F /* AnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D58B83D2D26F7630018D76F /* AnalyticsManager.swift */; };
+		6D58B8412D26F8050018D76F /* FirebaseAnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D58B8402D26F8050018D76F /* FirebaseAnalyticsManager.swift */; };
 		6D686B462CF301B200ECF012 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 6D686B452CF301B200ECF012 /* FirebaseAuth */; };
 		6D686B482CF301B200ECF012 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 6D686B472CF301B200ECF012 /* FirebaseCrashlytics */; };
 		6D686B4A2CF301B200ECF012 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 6D686B492CF301B200ECF012 /* FirebaseDatabase */; };
@@ -63,6 +65,8 @@
 		6D48E0BB2999645400847FA4 /* BreatheProgramListViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreatheProgramListViewModelProtocol.swift; sourceTree = "<group>"; };
 		6D48E0BD2999648500847FA4 /* BreatheProgramListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreatheProgramListViewModel.swift; sourceTree = "<group>"; };
 		6D50F07329A764E1000DBD23 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		6D58B83D2D26F7630018D76F /* AnalyticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsManager.swift; sourceTree = "<group>"; };
+		6D58B8402D26F8050018D76F /* FirebaseAnalyticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAnalyticsManager.swift; sourceTree = "<group>"; };
 		6D6FF28E29BBDC3D00D66534 /* SlideCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideCarousel.swift; sourceTree = "<group>"; };
 		6D76C76729DA03A2007C7974 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		6D76C76A29DB1BB3007C7974 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
@@ -180,9 +184,27 @@
 			path = MockData;
 			sourceTree = "<group>";
 		};
+		6D58B83C2D26F72C0018D76F /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				6D58B83F2D26F7D80018D76F /* Firebase */,
+				6D58B83D2D26F7630018D76F /* AnalyticsManager.swift */,
+			);
+			path = Analytics;
+			sourceTree = "<group>";
+		};
+		6D58B83F2D26F7D80018D76F /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				6D58B8402D26F8050018D76F /* FirebaseAnalyticsManager.swift */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
 		6D686B412CF3007D00ECF012 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				6D58B83C2D26F72C0018D76F /* Analytics */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -377,7 +399,9 @@
 				3AD17EB9293C0A3E005EC5C1 /* BreatheViewModelProtocol.swift in Sources */,
 				3A07B7D728E88AA6007FEA2C /* BreatheView.swift in Sources */,
 				6D093ECB29D0F82A006F3F50 /* SlideCard.swift in Sources */,
+				6D58B83E2D26F7630018D76F /* AnalyticsManager.swift in Sources */,
 				3A07B7D528E88A76007FEA2C /* BreatheType.swift in Sources */,
+				6D58B8412D26F8050018D76F /* FirebaseAnalyticsManager.swift in Sources */,
 				3AD17EBB293CBBD5005EC5C1 /* BreatheViewProtocol.swift in Sources */,
 				3A8BC4A528E3D55500E3AF07 /* iCalmApp.swift in Sources */,
 				6D76C76E29F5E4F8007C7974 /* CircleProgressBar.swift in Sources */,

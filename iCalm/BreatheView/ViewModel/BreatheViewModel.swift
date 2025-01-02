@@ -60,14 +60,16 @@ class BreatheViewModel: BreatheViewModelProtocol, ObservableObject {
     private var currentIndex = 0
     private var cancellable = Set<AnyCancellable>()
     private var counter = 0
+    private let analyticsManager: AnalyticsManager
     lazy private var timerPublisher: Timer.TimerPublisher = getTimerPublisher()
     lazy private var timeStamps = getTimeStamps()
     lazy private var length = getFullLength()
     
-    init(breatheModel: BreatheModel) {
+    init(breatheModel: BreatheModel, analyticsManager: AnalyticsManager) {
         self.breatheModel = breatheModel
         self.currentStage = BreatheStage(type: .stop, interval: 0)
         self.backgroundImageName = breatheModel.program.image
+        self.analyticsManager = analyticsManager
     }
     
     func clickButton() {
@@ -79,12 +81,18 @@ class BreatheViewModel: BreatheViewModelProtocol, ObservableObject {
         }
     }
     
+    func logOpened() {
+        analyticsManager.trackEvent(Event(name: "breathe_screen_opened",
+                                          properties: ["program_name": breatheModel.program.title]))
+    }
+    
     private func start() {
         var counter = 0
         currentIndex = 0
         currentProgress = 0
         currentStage = BreatheStage(type: .wait, interval: 1)
-        
+        analyticsManager.trackEvent(Event(name: "start_button_clicked",
+                                          properties: ["program_name": breatheModel.program.title]))
         guard let firstStage = breatheModel.program.stages.first else {
             return
         }
@@ -123,6 +131,10 @@ class BreatheViewModel: BreatheViewModelProtocol, ObservableObject {
         buttonTitle = "Start"
         currentProgramType = ""
         currentProgramCount = 0
+        let logEvent = Event(name: "stop_button_clicked",
+                             properties: ["program_name": breatheModel.program.title,
+                                          "current_progress": currentProgress])
+        analyticsManager.trackEvent(logEvent)
         cancellable.forEach {
             $0.cancel()
         }
