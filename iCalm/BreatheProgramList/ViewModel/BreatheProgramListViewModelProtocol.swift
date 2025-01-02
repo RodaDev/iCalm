@@ -9,4 +9,5 @@ import Combine
 
 protocol BreatheProgramListViewModelProtocol: ObservableObject {
     var models: [BreatheModel] { get }
+    func logShownModel(_ model: BreatheModel)
 }

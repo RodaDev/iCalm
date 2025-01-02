@@ -22,10 +22,11 @@ struct SlideCarouselList: View {
                     .padding(.top, 40)
                     SlideCarousel<SlideCard, BreatheProgram>(content: { program in
                         SlideCard(program: program)
-                    }, list: viewModel.models.map {$0.program},
-                                                           spacing: 16,
-                                                           trailingSpace: 32,
-                                                           index: $currentIndex)
+                    },
+                                                             list: viewModel.models.map {$0.program},
+                                                             spacing: 16,
+                                                             trailingSpace: 32,
+                                                             index: $currentIndex)
                     .frame(proxy.width * 0.94, proxy.height * 0.6)
                     .padding(.top, 16)
                     ProgramsPreview(program: viewModel.models[currentIndex].program)
